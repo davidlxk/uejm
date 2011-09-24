@@ -1,0 +1,30 @@
+<!-- Account -->
+<div data-role="page" id="account">
+	<div data-role="header" data-position="inline">
+		<h1>Account</h1>
+	</div>
+
+	<div data-role="content">
+		<div id="currentMobile">
+			<h2><div id="currentMobileNumber">Current mobile number: </div></h2>
+		</div>
+
+		<label id="newMobile" for="newMobileNumber"><h2>New mobile number:</h2></label>
+		<input type="tel" name="newMobileNumber" id="newMobileNumber" value=""/>
+		
+		<a id="updateAccountButton" data-rel="dialog" data-transition="pop" data-role="button">Save</a>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="index.html" data-role="button" data-icon="star">Favourites</a></li>
+				<li><a href="topup.html" data-icon="refresh">Top Up</a></li>
+				<li><a href="addcard.html" data-icon="plus">Add Card</a></li>
+				<li><a href="history.html" data-icon="info">History</a></li>
+				<li><a href="account.html" class="ui-btn-active" data-icon="gear">Account</a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="resource/js/account.js"></script>
+</div>

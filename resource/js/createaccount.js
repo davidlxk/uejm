@@ -16,7 +16,7 @@ $(document).ready(function() {
 			$.Storage.set('account',account);
 			$.Storage.set({"account":"account one", "mobileNumber":mobileNumber, 
 							"cardNumber":cardNumber, "defaultValue":defaultValue});
-			window.location.href = "http://localhost/uejm/index.html";
+			window.location.href = "http://westerncircuit.com/test/xk/index.html";
 		} else { return false; }
 
 	});

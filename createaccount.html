@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>EZLink</title> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+		<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<script src="resource/js/jquery/jquery.mobile-1.0b3.min.js"></script>
+		<script src="resource/js/jquery/jquery.Storage.js"></script>
+		<script src="resource/js/createaccount.js"></script>
+	</head> 
+	<body> 
+
+		<!-- Create new account -->
+		<div data-role="page" id="createAccount">
+			<div data-role="header" data-position="inline">
+				<h1>New Account<h1>
+			</div>
+	
+			<div data-role="content">
+				<label for="mobileNumber">Mobile number:</label>
+				<input type="tel" name="mobileNumber" id="mobileNumber" value=""  />
+				<label for="cardNumber">Card number:</label>
+				<input type="tel" name="cardNumber" id="cardNumber" value=""  />
+				<label for="defaultTopupValue" class="select">Default Top-up Value:</label>
+				<select name="defaultTopupValue" id="defaultTopupValue">
+					<option value="10">$10</option>
+					<option value="20">$20</option>
+					<option value="30">$30</option>
+					<option value="40">$40</option>
+				</select>
+				<a id = "createButton" data-role="button">Create</a>
+			</div>
+	
+		</div>
+	</body>
+</html>

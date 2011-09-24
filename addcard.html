@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>EZLink 2</title> 
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="topup">
+
+<div data-role="header" data-position="inline">
+		<h1>Top Up</h1>
+</div>
+
+
+<div data-role="content">
+<div data-role="fieldcontain">
+ <label for="name">Name/Alias:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+<div data-role="fieldcontain">
+ <label for="name">Card #:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+<div data-role="fieldcontain">
+	<label for="select-choice-1" class="select">Choose default value: ($)</label>
+	<select name="select-choice-1" id="select-choice-1">
+		<option value="10">10</option>
+		<option value="20">20</option>
+		<option value="30">30</option>
+		<option value="40">40</option>
+	</select>
+</div>
+
+</div>
+
+<div data-role="footer" data-position="fixed">
+<div data-role="navbar">
+<ul>
+<li><a href="index.html" data-role="button" data-icon="star">Favourites</a></li>
+<li><a href="topup.html"  data-icon="refresh">Top Up</a></li>
+<li><a href="addcard.html" class="ui-btn-active" data-icon="plus">Add Card</a></li>
+<li><a href="history.html" data-icon="info">History</a></li>
+<li><a href="account.html" data-icon="gear">Account</a></li>
+
+</ul></div></div>
+
+
+
+
+</div>
+
+
+</body>
+</html>

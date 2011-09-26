@@ -4,7 +4,8 @@ $('#home').live('pagebeforecreate',function(event){
 	account = $.Storage.get("account");
 	// alert(account);
 	if (account==null) { //if no account yet
-		window.location.href = "http://westerncircuit.com/test/xk/createaccount.html";
+		window.location.href = "http://localhost/uejm/createaccount.html";
+		//window.location.href = "http://westerncircuit.com/test/xk/createaccount.html";
 	} // else {
 	// 		if (account.size>0) {
 	// 			alert(account);

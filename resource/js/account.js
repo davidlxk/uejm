@@ -7,7 +7,7 @@ $(document).ready(function() {
 	//when update account button is tapped/clicked on
 	$("#updateAccountButton").live('tap click',function(event,ui) {
 		var newNumber = $("#newMobileNumber").val();
-		if (newNumber!='') { //if new mobile number entered
+		if (newNumber!='') { //if new mobile number entered (i.e new Mobile number field not empty)
 			$.Storage.set('mobileNumber',newNumber); //override the mobile number with the new one in localStorage
 			$.mobile.changePage('accountsaved.html','pop',false,true); //display the pop up dialog upon saved
 		} else { return false; }

@@ -1,3 +1,6 @@
+var newMobileNumberValue,
+	verifyMobile;
+	
 $(document).ready(function() {
 	
 	$(document).bind("mobileinit", function(){ $.mobile.page.prototype.options.domCache = true; }); //initialize jQuery mobile
@@ -15,56 +18,37 @@ $(document).ready(function() {
 	var updateAccountButton = $("#updateAccountButton");
 	
 	//when update account button is tapped/clicked on
-	updateAccountButton.live('tap click',function(event,ui) {
+	updateAccountButton.live('click',function(event,ui) {
 		
 		var newMobileNumber = $("#newMobileNumber"); //cache the text field
-		var newNumber = newMobileNumber.val();
+		newMobileNumberValue = newMobileNumber.val();
 		
-		if (newNumber!='') { //if new mobile number entered (i.e new Mobile number field not empty)
-
-			$.Storage.set('mobileNumber',newNumber); //override the mobile number with the new one in localStorage
-
-			$(this).simpledialog({
-			    'mode' : 'string',
-				'inputPassword': true,
-				'useModal': true,
-			    'prompt' : 'A SMS has been sent to you. Please enter the verification code in it',
-			    'buttons' : {
-			    	'OK': {
-			        	click: function () {
-							//re-cache the DOM variables and value
-							newMobileNumber = $("#newMobileNumber");
-							newNumber = newMobileNumber.val();
-							
-							var message; //to store the respective message for displaying later
-
-							if (updateAccountButton.attr('data-string')!='') { //if something is entered into verification field
-								currentMobileNumber.html("Current mobile number: " + newNumber);
-								newMobileNumber.val(''); //empty the new mobile number text field
-								message = "Your mobile number has been updated";
-							} else { message = "Invalid verification number"; }
-							
-							//show new dialog indicating that mobile number has been updated / verification number error
-							$(document).simpledialog({
-								'mode': 'bool',
-								'prompt' : message,
-								'buttons' : {
-									'OK' : {
-										click: function() {}
-									}
-								}
-							});
-			        	}
-				   	},
-					'Cancel' : {
-						click: function () { return false; }
-					}
-			    }
-			});
+		if (newMobileNumberValue!='') { //if new mobile number entered (i.e new Mobile number field not empty)			
+		
+			$("#showDialog").trigger('click'); //trigger click event to show 'ask for verification number' dialog
 			
-			// updateAccountButton.props('data-string','');
-			
-			// $.mobile.changePage('accountsaved.html','pop',false,true); //display the pop up dialog upon saved
 		} else { return false; }
+	});
+	
+	$("#verifyBtn").live('click',function() { //when verify button pop up dialog is clicked on
+		
+		verifyMobile = $("#verifyMobile"); //cache the ask verification number dialog
+		
+		if ($("#verificationNum").val()!="") { //if verify code is entered
+			
+			$.Storage.set('mobileNumber',newMobileNumberValue); //override the mobile number with the new one in localStorage
+			$("#goToVerifyOkay").trigger('click'); //trigger click event to go to show verification okay dialog
+			
+		} else { //if no verify code entered or invalid code
+			
+			$("#goToVerifyError").trigger('click'); //trigger click event to go to show verification error dialog
+		}
+	});
+	
+	$("#verifyOkayClose").live('click',function() { //when verification is successful and user clicks on Ok on successful dialog
+		
+		$("#currentMobileNumber").html('Current mobile number: ' + newMobileNumberValue); //display new mobile number
+		window.location.href = "http://localhost/uejm/index.html"; //redirect to index page when update successful
+
 	});
 });

@@ -1,0 +1,20 @@
+
+<!--dialog upon saving-->
+<div data-role="dialog" id="verifyMobile">
+	<div data-role="header" data-position="inline">
+		<h1>Verification code required</h1>
+	</div>
+	
+	<div data-role="content">
+		<form>
+			<h2>
+				A SMS has been sent to your mobile phone. Please enter below the verification code you have received in it
+			</h2>
+			<input type="text" placeholder="Verification number" id="verificationNum" value="" style="float:center;"/>
+			<a href="" id="verifyBtn" data-role="button" data-theme="b">Verify</a>
+			<a id="goToVerifyOkay" href="verifyokay.html" data-rel="dialog" data-transition="pop" style="display:none;"></a>
+			<a href="" data-role="button" data-rel="back" data-theme="c">Cancel</a>
+			<a id="goToVerifyError" href="verifyerror.html" data-rel="dialog" data-transition="pop" style="display:none;"></a>
+		</form>
+	</div>
+</div>

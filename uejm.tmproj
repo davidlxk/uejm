@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>addcard.html</string>
+	<string>account.html</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -26,28 +26,44 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>8</integer>
-				<key>line</key>
 				<integer>26</integer>
+				<key>line</key>
+				<integer>18</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<key>accountsaved.html</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>6</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>10</integer>
+				<integer>1</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>6</integer>
+				<key>line</key>
+				<integer>10</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
 		</dict>
 		<key>addcard.html</key>
 		<dict>
@@ -82,14 +98,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>9</integer>
+				<integer>7</integer>
 				<key>line</key>
-				<integer>14</integer>
+				<integer>15</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>1</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>7</integer>
+				<key>line</key>
+				<integer>15</integer>
+			</dict>
 		</dict>
 		<key>resource/css/jquery.mobile-1.0b3.min.css</key>
 		<dict>
@@ -124,14 +156,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>35</integer>
+				<integer>27</integer>
 				<key>line</key>
-				<integer>20</integer>
+				<integer>17</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>4</integer>
 		</dict>
 		<key>resource/js/createaccount.js</key>
 		<dict>
@@ -239,8 +271,6 @@
 		<string>addcard.html</string>
 		<string>createaccount.html</string>
 		<string>index.html</string>
-		<string>resource/css/jquery.mobile.simpledialog.min.css</string>
-		<string>resource/js/jquery/jquery.mobile.simpledialog.min.js</string>
 		<string>resource/js/account.js</string>
 		<string>account.html</string>
 		<string>accountsaved.html</string>
